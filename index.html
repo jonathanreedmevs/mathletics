@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mathletics Data Entry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyBYvK9Xjvzt0jgzNznTqmqSYALTspqlSdI",
+    authDomain: "mathletics-survey-data-19.firebaseapp.com",
+    databaseURL: "https://mathletics-survey-data-19.firebaseio.com",
+    projectId: "mathletics-survey-data-19",
+    storageBucket: "",
+    messagingSenderId: "858730263152",
+    appId: "1:858730263152:web:1850ecaff75a2067"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var fire = firebase.firestore();
+</script>
+    
+</head>
+<body>
+    <form action="" id="myForm">
+        <h1> Sports </h1>
+        <br>
+        <div class="row">
+            <div class="column">
+                <input name="sports" type="checkbox" value="Football"> Football <br>
+                <input name="sports" type="checkbox" value="Baseball"> Baseball <br>
+                <input name="sports" type="checkbox" value="Basketball"> Basketball <br>
+            </div>
+
+            <div class="column">
+                <input name="sports" type="checkbox" value="Soccer"> Soccer <br>
+                <input name="sports" type="checkbox" value="Swimming"> Swimming <br>
+                <input name="sports" type="checkbox" value="Tennis"> Tennis <br>
+            </div>
+
+            <div class="column">
+                <input name="sports" type="checkbox" value="Track"> Track <br>
+                <input name="sports" type="checkbox" value="Lacrosse"> Lacrosse <br>
+                <input name="sports" type="checkbox" value="Other"> Other <br>
+            </div>
+            
+        </div>
+        
+        <br>
+        
+        <b>How many hours a week do you spend playing sports?</b>
+        <input id="playing" type="text">
+
+        <br>
+
+        <b>How many hours a week do you spend watching sports?</b>
+        <input id="watching" type="text">
+
+        <br>
+
+        <b>How many hours a week do you spend analyzing sports?</b>
+        <input id="analyzing" type="text">
+
+        <br>
+
+        <br>
+        <b>Are you on an organized sports team at UMD?</b>
+        <br></br>
+        Varsity <input name="organized" type="checkbox" value="Varsity">
+        Club <input name="organized" type="checkbox" value="Club">
+        Intramural <input name="organized" type="checkbox" value="Intramural">
+        Pickup <input name="organized" type="checkbox" value="Pickup">
+        None <input name="organized" type="checkbox" value="None">
+        <br>
+
+        <br>
+
+        <b>Do you think athletes at UMD get special treatment?</b>
+        Yes<input name="special" type="radio" value = "Yes">
+        No<input name="special" type="radio" value = "No">
+
+        <br>
+        <br>
+        <b> On a scale of 1-5, how much do you enjoy sports? </b>
+        <br><br>
+        1<input name="enjoyment" type="radio" value = "1">
+        2<input name="enjoyment" type="radio" value = "2">
+        3<input name="enjoyment" type="radio" value = "3">
+        4<input name="enjoyment" type="radio" value = "4">
+        5<input name="enjoyment" type="radio" value = "5">
+        <br><br>
+        <b>What aspect of sports do you enjoy the most?</b>
+        <br></br>
+        Fun <input name="aspect" type="checkbox" value="Fun">
+        Competition <input name="aspect" type="checkbox" value="Competition">
+        Health <input name="aspect" type="checkbox" value="Health">
+        Challenge <input name="aspect" type="checkbox" value="Challenge">
+        Social <input name="aspect" type="checkbox" value="Social">
+        <br>
+        <b>What is your shoe size?</b>
+        <input id = "shoesize" type = "text">
+        <br><br>
+        <b>What is your height</b>
+        <input id = "heightFt" type = "text">'
+        <input id = "heightIn" type="text">''
+        <br>
+        <br>
+        <br>
+
+
+        <input type="submit" value="Submit">
+        
+    </form>
+</body>
+<script src="main.js"></script>
+</html>
