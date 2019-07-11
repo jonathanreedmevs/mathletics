@@ -33,7 +33,7 @@
   firebase.initializeApp(firebaseConfig);
   var fire = firebase.firestore();
 </script>
-    
+
 </head>
 <body>
     <form action="" id="myForm">
@@ -57,11 +57,11 @@
                 <input name="sports" type="checkbox" value="Lacrosse"> Lacrosse <br>
                 <input name="sports" type="checkbox" value="Other"> Other <br>
             </div>
-            
+
         </div>
-        
+
         <br>
-        
+
         <b>How many hours a week do you spend playing sports?</b>
         <input id="playing" type="text">
 
@@ -123,8 +123,14 @@
 
 
         <input type="submit" value="Submit">
-        
+
     </form>
+
+    <br><br>
+
+    <form action="" id="getTotals">
+    <input type ="submit" value="Get Totals">
+  </form>
 </body>
 <script src="main.js"></script>
 </html>
