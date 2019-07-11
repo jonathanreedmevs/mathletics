@@ -133,3 +133,24 @@ $('#getAspectTotals').submit(function(event){
 });
 console.log(totals);
 });
+
+$('#getSpecialTotals').submit(function(event){
+  event.preventDefault();
+
+  let totals = {
+    Yes: 0,
+    No: 0
+  }
+
+  fire.collection("Survey Entries").get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+      let special = doc.data()["Special Treatment"];
+      if(special === "Yes"){
+        totals['Yes']++;
+      }else{
+        totals['No']++;
+      }
+    });
+  });
+  console.log(totals);
+});
